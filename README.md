@@ -10,3 +10,9 @@ Classroom management
 
 --> Store the data in an excel sheet to be read and modified<br>
 --> Query: Logic to check the availability of classroom<br>
+
+Input<br>
+--> Faculty Timetable<br>
+--> Student Timetable<br>
+--> Classroom List<br>
+--> 
