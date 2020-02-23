@@ -2,17 +2,18 @@
 
 OS Project 
 
-Classroom management
+Timetable Generation
 
---> Data: Stores which classrooms are occupied by which class at which time, also store the faculty timetable<br>
---> Modification: The Administrator can change the class schedule<br>
---> Office: Can query the database for the availability of classroom at a particular time<br>
+Input
+<br>--> Number of Branches </br>
+--> Hours required by each branch for each faculty
 
---> Store the data in an excel sheet to be read and modified<br>
---> Query: Logic to check the availability of classroom<br>
+Output
+<br>--> The timetable generated for the batches</br>
 
-Input<br>
---> Faculty Timetable<br>
---> Student Timetable<br>
---> Classroom List<br>
---> 
+
+<br><br><br></br></br></br>
+
+Additional Functionality [To be implemented later]:
+--> Individual Batch Timetable
+--> Individual Faculty Timetable
