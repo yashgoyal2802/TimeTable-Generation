@@ -15,5 +15,5 @@ Output
 <br><br><br></br></br></br>
 
 Additional Functionality [To be implemented later]:
---> Individual Batch Timetable
+<br>--> Individual Batch Timetable</br>
 --> Individual Faculty Timetable
