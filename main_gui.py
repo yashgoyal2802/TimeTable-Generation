@@ -3,6 +3,15 @@ from tkinter import *
 window = Tk()
 window.title("Timetable Generation OS Project")
 
+
+def set_values():
+    list_1 = [label3_1.get(), label3_2.get(), label3_3.get(), label3_4.get()]
+    list_2 = [label4_1.get(), label4_2.get(), label4_3.get(), label4_4.get()]
+    list_3 = [label5_1.get(), label5_2.get(), label5_3.get(), label5_4.get()]
+    list_4 = [label6_1.get(), label6_2.get(), label6_3.get(), label6_4.get()]
+
+
+
 text1 = Label(window, text="Enter the faculty hours required for each branch")
 
 text2 = Label(window, text="Branch Name")
@@ -68,7 +77,7 @@ label6_2.grid(row=5, column=2)
 label6_3.grid(row=5, column=3)
 label6_4.grid(row=5, column=4)
 
-button1 = Button(window, text="Submit Request")
+button1 = Button(window, text="Submit Request", command = set_values)
 button1.grid(row=6, column=2)
 
 window.mainloop()
