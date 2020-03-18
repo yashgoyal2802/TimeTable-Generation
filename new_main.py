@@ -27,22 +27,54 @@ for hour in range(0, 8):
             print("Breaking FREE")
             flag = 1
             break
+
+        semaphore_list = []
+
         if len(fac_list_1) > 0:
-            print(f'Day {day+1} Hour {hour+8}')
-            faculty_list[hour][day][0] = fac_list_1[0]
-            fac_list_1.pop(0)
+            try:
+                for x in range(0, 4):
+                    if fac_list_1[x] not in semaphore_list:
+                        faculty_list[hour][day][0] = fac_list_1[x]
+                        semaphore_list.append(fac_list_1[x])
+                        fac_list_1.pop(x)
+                        break
+            except IndexError:
+                pass
 
         if len(fac_list_2) > 0:
-            faculty_list[hour][day][1] = fac_list_2[0]
-            fac_list_2.pop(0)
+            try:
+                for x in range(0, 4):
+                    if fac_list_2[x] not in semaphore_list:
+                        faculty_list[hour][day][1] = fac_list_2[x]
+                        semaphore_list.append(fac_list_2[x])
+                        fac_list_2.pop(x)
+                        break
+            except IndexError:
+                pass
 
         if len(fac_list_3) > 0:
-            faculty_list[hour][day][2] = fac_list_3[0]
-            fac_list_3.pop(0)
+            try:
+                for x in range(0, 4):
+                    if fac_list_3[x] not in semaphore_list:
+                        faculty_list[hour][day][2] = fac_list_3[x]
+                        semaphore_list.append(fac_list_3[x])
+                        fac_list_3.pop(x)
+                        break
+            except IndexError:
+                pass
 
         if len(fac_list_4) > 0:
-            faculty_list[hour][day][3] = fac_list_4[0]
-            fac_list_4.pop(0)
+            try:
+                for x in range(0, 4):
+                    if fac_list_4[x] not in semaphore_list:
+                        faculty_list[hour][day][3] = fac_list_4[x]
+                        semaphore_list.append(fac_list_4[x])
+                        fac_list_4.pop(x)
+                        break
+            except IndexError:
+                pass
+        print(faculty_list[hour])
+
 
 for hour in range(0, 8):
     print(faculty_list[hour])
