@@ -11,7 +11,6 @@ def to_alloc(mylist):
             y += 1
         else:
             z += 1
-
     # print(f'0-{w}  1-{x}  2-{y}  3-{z}')
     final_list = []
 
@@ -32,8 +31,7 @@ def to_alloc(mylist):
             final_list.append(3)
             z -= 1
         # print(f'0-{w}  1-{x}  2-{y}  3-{z}')
-
-    print(final_list)
+    # print(final_list)
     return final_list
 
 
