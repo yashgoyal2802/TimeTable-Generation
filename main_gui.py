@@ -9,12 +9,12 @@ def set_values():
     list_2 = [label4_1.get(), label4_2.get(), label4_3.get(), label4_4.get()]       #Batch 2
     list_3 = [label5_1.get(), label5_2.get(), label5_3.get(), label5_4.get()]       #Batch 3
     list_4 = [label6_1.get(), label6_2.get(), label6_3.get(), label6_4.get()]       #Batch 4
-    flist = [list_1, list_2, list_3, list_4]
+    final_list = [list_1, list_2, list_3, list_4]
     print(list_1)
     print(list_2)
     print(list_3)
     print(list_4)
-    print(flist)
+    print(final_list)
 
     fac_list_1 = []                 # Number of lectures by each batch
     fac_list_2 = []
@@ -22,19 +22,19 @@ def set_values():
     fac_list_4 = []
 
     for faculty_no in range(0, 4):
-        x = int(flist[faculty_no][0])
+        x = int(final_list[faculty_no][0])
         for hour_cnt in range(0, x):
             fac_list_1.append(faculty_no)
 
-        x1 = int(flist[faculty_no][1])
+        x1 = int(final_list[faculty_no][1])
         for hour_cnt in range(0, x1):
             fac_list_2.append(faculty_no)
 
-        x2 = int(flist[faculty_no][2])
+        x2 = int(final_list[faculty_no][2])
         for hour_cnt in range(0, x2):
             fac_list_3.append(faculty_no)
 
-        x3 = int(flist[faculty_no][3])
+        x3 = int(final_list[faculty_no][3])
         for hour_cnt in range(0, x3):
             fac_list_4.append(faculty_no)
 
