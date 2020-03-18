@@ -34,6 +34,7 @@ def to_alloc(mylist):
         # print(f'0-{w}  1-{x}  2-{y}  3-{z}')
 
     print(final_list)
+    return final_list
 
 
 # list1 = [0, 0, 1, 1, 1, 1, 2, 2, 2, 3]
