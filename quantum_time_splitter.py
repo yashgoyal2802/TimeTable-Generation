@@ -1,5 +1,5 @@
 
-def to_alloc(mylist):
+def quantum_splitter(mylist):
     w, x, y, z, = 0, 0, 0, 0
 
     for element in mylist:
@@ -30,10 +30,7 @@ def to_alloc(mylist):
         if z != 0:
             final_list.append(3)
             z -= 1
-        # print(f'0-{w}  1-{x}  2-{y}  3-{z}')
-    # print(final_list)
     return final_list
 
 
-# list1 = [0, 0, 1, 1, 1, 1, 2, 2, 2, 3]
-# to_alloc(list1)
+

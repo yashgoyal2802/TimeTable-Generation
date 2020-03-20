@@ -1,4 +1,4 @@
-from req_to_all_list import to_alloc
+from quantum_time_splitter import quantum_splitter
 
 faculty_list = [[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
                 ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
@@ -9,14 +9,18 @@ faculty_list = [[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, 
                 ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
                 ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]]     # [Hour of Day][Day of Week][Faculty]
 
-for hour in range(0, 8):
-    print(faculty_list[hour])
+# Initial Matrix
+# for hour in range(0, 8):
+#     print(faculty_list[hour])
 
 
-fac_list_1 = to_alloc([0, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3])
-fac_list_2 = to_alloc([0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3])
-fac_list_3 = to_alloc([0, 0, 1, 2, 2, 2, 2, 2, 2, 3, 3])
-fac_list_4 = to_alloc([1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3])
+fac_list_1 = quantum_splitter([0, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3])
+fac_list_2 = quantum_splitter([0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3])
+fac_list_3 = quantum_splitter([0, 0, 1, 2, 2, 2, 2, 2, 2, 3, 3])
+fac_list_4 = quantum_splitter([1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3])
+
+print('============================   REQUIREMENT HOURS   ==================================')
+
 
 print(fac_list_1)
 print(fac_list_2)
@@ -25,12 +29,14 @@ print(fac_list_4)
 
 flag = 0
 
+print('==============================   ALLOCATED TIMETABLE   ================================')
+
 for hour in range(0, 8):
     if flag == 1:
         break
     for day in range(0, 5):
         if len(fac_list_1) == 0 and len(fac_list_2) == 0 and len(fac_list_3) == 0 and len(fac_list_4) == 0:
-            print("Breaking FREE")
+            # print("Breaking FREE")
             flag = 1
             break
 
