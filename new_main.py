@@ -14,10 +14,10 @@ faculty_list = [[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, 
 #     print(faculty_list[hour])
 
 
-fac_list_1 = quantum_splitter([0, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3])
-fac_list_2 = quantum_splitter([0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3])
-fac_list_3 = quantum_splitter([0, 0, 1, 2, 2, 2, 2, 2, 2, 3, 3])
-fac_list_4 = quantum_splitter([1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3])
+fac_list_1 = quantum_splitter([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3])
+fac_list_2 = quantum_splitter([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3])
+fac_list_3 = quantum_splitter([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3])
+fac_list_4 = quantum_splitter([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3])
 
 print('============================   REQUIREMENT HOURS   ==================================')
 
@@ -32,13 +32,13 @@ flag = 0
 print('==============================   ALLOCATED TIMETABLE   ================================')
 
 for hour in range(0, 8):
-    if flag == 1:
-        break
+    # if flag == 1:
+    #     break
     for day in range(0, 5):
-        if len(fac_list_1) == 0 and len(fac_list_2) == 0 and len(fac_list_3) == 0 and len(fac_list_4) == 0:
-            # print("Breaking FREE")
-            flag = 1
-            break
+        # if len(fac_list_1) == 0 and len(fac_list_2) == 0 and len(fac_list_3) == 0 and len(fac_list_4) == 0:
+        #     # print("Breaking FREE")
+        #     flag = 1
+        #     break
 
         semaphore_list = []
 
