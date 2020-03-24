@@ -1,8 +1,8 @@
 from tkinter import *
+from new_main import semaphore_algo
 
 window = Tk()
 window.title("Timetable Generation OS Project")
-
 
 def set_values():
     list_1 = [label3_1.get(), label3_2.get(), label3_3.get(), label3_4.get()]       #Batch 1
@@ -43,37 +43,33 @@ def set_values():
     print(fac_list_3)
     print(fac_list_4)
 
+    semaphore_algo(fac_list_1, fac_list_2, fac_list_3, fac_list_4)
+
 
 text1 = Label(window, text="Enter the faculty hours required for each branch")
+text1.grid(row=0)
+
 text2 = Label(window, text="Branch Name")
 text2_1 = Label(window, text="Faculty 1")
 text2_2 = Label(window, text="Faculty 2")
 text2_3 = Label(window, text="Faculty 3")
 text2_4 = Label(window, text="Faculty 4")
-
-text1.grid(row=0)
-
-
-text3 = Label(window, text="B.Tech CS")
-label3_1 = Entry(window)
-label3_2 = Entry(window)
-label3_3 = Entry(window)
-label3_4 = Entry(window)
-
-
 text2.grid(row=1, column=0)
 text2_1.grid(row=1, column=1)
 text2_2.grid(row=1, column=2)
 text2_3.grid(row=1, column=3)
 text2_4.grid(row=1, column=4)
 
-
+text3 = Label(window, text="B.Tech CS")
+label3_1 = Entry(window)
+label3_2 = Entry(window)
+label3_3 = Entry(window)
+label3_4 = Entry(window)
 text3.grid(row=2, column=0)
 label3_1.grid(row=2, column=1)
 label3_2.grid(row=2, column=2)
 label3_3.grid(row=2, column=3)
 label3_4.grid(row=2, column=4)
-
 
 text4 = Label(window, text="B.Tech IT")
 label4_1 = Entry(window)
@@ -112,5 +108,3 @@ button1 = Button(window, text="Submit Request", command=set_values)
 button1.grid(row=6, column=2)
 
 window.mainloop()
-
-
