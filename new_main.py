@@ -1,15 +1,10 @@
 from quantum_time_splitter import quantum_splitter
 from writing_excel import write
 
-def semaphore_algo(f1,f2,f3,f4):
-    faculty_list = [[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]
-                    ,[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]]     # [Hour of Day][Day of Week][Faculty]
+
+def semaphore_algo(f1, f2, f3, f4):
+    faculty_list = [[[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1],
+        [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], [[-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]]]     # [Hour of Day][Day of Week][Faculty]
 
     # Initial Matrix
     # for hour in range(0, 8):
@@ -31,7 +26,68 @@ def semaphore_algo(f1,f2,f3,f4):
 
     print('==============================   ALLOCATED TIMETABLE   ================================')
 
-    for hour in range(0, 8):
+
+<< << << < HEAD
+for hour in range(0, 8):
+    # if flag == 1:
+    #     break
+    for day in range(0, 5):
+        # if len(fac_list_1) == 0 and len(fac_list_2) == 0 and len(fac_list_3) == 0 and len(fac_list_4) == 0:
+        #     # print("Breaking FREE")
+        #     flag = 1
+        #     break
+
+        semaphore_list = []
+
+        if len(fac_list_1) > 0:
+            try:
+                for x in range(0, 4):
+                    if fac_list_1[x] not in semaphore_list:
+                        faculty_list[hour][day][0] = fac_list_1[x]
+                        semaphore_list.append(fac_list_1[x])
+                        fac_list_1.pop(x)
+                        break
+            except IndexError:
+                pass
+
+        if len(fac_list_2) > 0:
+            try:
+                for x in range(0, 4):
+                    if fac_list_2[x] not in semaphore_list:
+                        faculty_list[hour][day][1] = fac_list_2[x]
+                        semaphore_list.append(fac_list_2[x])
+                        fac_list_2.pop(x)
+                        break
+            except IndexError:
+                pass
+
+        if len(fac_list_3) > 0:
+            try:
+                for x in range(0, 4):
+                    if fac_list_3[x] not in semaphore_list:
+                        faculty_list[hour][day][2] = fac_list_3[x]
+                        semaphore_list.append(fac_list_3[x])
+                        fac_list_3.pop(x)
+                        break
+            except IndexError:
+                pass
+
+        if len(fac_list_4) > 0:
+            try:
+                for x in range(0, 4):
+                    if fac_list_4[x] not in semaphore_list:
+                        faculty_list[hour][day][3] = fac_list_4[x]
+                        semaphore_list.append(fac_list_4[x])
+                        fac_list_4.pop(x)
+                        break
+            except IndexError:
+                pass
+
+
+for hour in range(0, 8):
+    print(faculty_list[hour])
+== == == =
+   for hour in range(0, 8):
         if flag == 1:
             break
         for day in range(0, 5):
@@ -86,8 +142,9 @@ def semaphore_algo(f1,f2,f3,f4):
                 except IndexError:
                     pass
 
-    #print(faculty_list)
+    # print(faculty_list)
     for hour in range(0, 8):
         print(faculty_list[hour])
 
     write(faculty_list)
+>>>>>> > master
