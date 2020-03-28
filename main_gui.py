@@ -4,6 +4,20 @@ from new_main import semaphore_algo
 window = Tk()
 window.title("Timetable Generation OS Project")
 
+
+class ProvideException(object):
+    def __init__(self, func):
+        self._func = func
+
+    def __call__(self, *args):
+        try:
+            return self._func(*args)
+        except ValueError:
+            print("Please enter Numerical values only")
+        except KeyboardInterrupt:
+            print("You hit a interrupt key like ' ctrl+c' or 'ctrl+v'. Please rerun the code. ")
+
+@ProvideException
 def set_values():
     list_1 = [label3_1.get(), label3_2.get(), label3_3.get(), label3_4.get()]       #Batch 1
     list_2 = [label4_1.get(), label4_2.get(), label4_3.get(), label4_4.get()]       #Batch 2
