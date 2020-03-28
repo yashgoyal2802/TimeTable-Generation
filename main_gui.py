@@ -4,6 +4,7 @@ from new_main import semaphore_algo
 window = Tk()
 window.title("Timetable Generation OS Project")
 
+
 def set_values():
     list_1 = [label3_1.get(), label3_2.get(), label3_3.get(), label3_4.get()]       #Batch 1
     list_2 = [label4_1.get(), label4_2.get(), label4_3.get(), label4_4.get()]       #Batch 2
@@ -44,6 +45,13 @@ def set_values():
     print(fac_list_4)
 
     semaphore_algo(fac_list_1, fac_list_2, fac_list_3, fac_list_4)
+
+
+# def write_log(text):
+#     global g
+#     g.configure(state='normal')
+#     g.insert('end', f'{text}')
+#     g.configure(state='disabled')
 
 
 text1 = Label(window, text="Enter the faculty hours required for each branch")
@@ -105,6 +113,12 @@ label6_3.grid(row=5, column=3)
 label6_4.grid(row=5, column=4)
 
 button1 = Button(window, text="Submit Request", command=set_values)
-button1.grid(row=6, column=2)
+button1.grid(row=6, column=3)
+
+g = Text(window, height=7, width=50, state='disabled')
+g.configure(state='normal')
+g.insert('end', 'This is a Log of the Program\n')
+g.configure(state='disabled')
+g.grid(row=9, column=0)
 
 window.mainloop()
