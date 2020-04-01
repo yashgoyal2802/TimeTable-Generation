@@ -15,11 +15,9 @@ class ProvideException(object):
         except ValueError:
             text7 = Label(window, text="Please enter integer values only")
             text7.grid(row=7, column=0)
-            #print("Please enter Numerical values only")
         except KeyboardInterrupt:
             text7 = Label(window, text="You hit a interrupt key like ' ctrl+c' or 'ctrl+v'. Please rerun the code.")
             text7.grid(row=7, column=0)
-            #print("You hit a interrupt key like ' ctrl+c' or 'ctrl+v'. Please rerun the code. ")
 
 @ProvideException
 def set_values():
