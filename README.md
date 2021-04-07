@@ -1,19 +1,10 @@
-# OSProject_ClassroomManagement
+# Timetable-Generation
+#### Using Python and database management to build a user friendly interface for institutes to create and manage timetables of multiple branches and courses.
 
-OS Project 
+Refer the 'Mini Project Report' to understand the flow of code.
 
-Timetable Generation
+Sample input and output:
 
-Input
-<br>--> Number of Branches </br>
---> Hours required by each branch for each faculty
+![](images/GUI%20input.png)
 
-Output
-<br>--> The timetable generated for the batches</br>
-
-
-<br><br><br></br></br></br>
-
-Additional Functionality [To be implemented later]:
-<br>--> Individual Batch Timetable</br>
---> Individual Faculty Timetable
+![](images/Excel%20output.png)
